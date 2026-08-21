@@ -16,7 +16,7 @@ public class WolfSpwan : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()//runs everyframe
     {
         timer -= Time.deltaTime;
         if (timer <= 0)
@@ -24,7 +24,7 @@ public class WolfSpwan : MonoBehaviour
             SpawnEnemy();
         }
     }
-    void SpawnEnemy()
+    void SpawnEnemy()//create new wolf
     { 
         Instantiate(WolfPrefab, transform.position, Quaternion.identity);
         timer = spawnTime;
